@@ -1,5 +1,8 @@
 package com.leetcode.easy;
 
+import com.leetcode.mark.BetterWay;
+
+@BetterWay
 public class LeetCode_338 {
 	/**
 	 * Optimized O(n) complexity
