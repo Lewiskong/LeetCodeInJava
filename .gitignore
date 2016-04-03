@@ -10,3 +10,4 @@ logs/
 */.DS_Store
 .project
 src/main/resources/datasource.properties
+bin/
