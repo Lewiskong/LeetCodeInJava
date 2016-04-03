@@ -19,7 +19,6 @@ public class LeetCode_338 {
 	 */
 	/**
 	public static int highestOneBit(int i) {
-        // HD, Figure 3-1
         i |= (i >>  1);
         i |= (i >>  2);
         i |= (i >>  4);
