@@ -1,0 +1,12 @@
+target/
+config/jdbc.properties
+config/log4j.properties
+logs/
+*.DS_Store
+/target/*
+.classpath
+.settings/*
+.DS_Store
+*/.DS_Store
+.project
+src/main/resources/datasource.properties
