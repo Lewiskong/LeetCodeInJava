@@ -17,14 +17,11 @@ import com.leetcode.mark.BetterWay;
 @BetterWay
 public class LeetCode_136 {
 	
-	//the fabulous solution with only O(1) extra memory using XOR operation
-	public int singleNumber(int[] nums) {
-	     int res=0;
-	     for (int num:nums){
-	    	 res^=num;
-	     }
-	     return res;
-    }
+	public static void main(String[] args){
+		Integer a=new Integer(12);
+		Integer b=new Integer(12);
+		System.out.println(a.equals(b));
+	}
 	
 	
 	//normal solution with extra memory
