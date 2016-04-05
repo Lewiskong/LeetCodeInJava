@@ -14,25 +14,42 @@ import com.leetcode.mark.BetterWay;
 //Single Number III
 @BetterWay
 public class LeetCode_260 {
-	
-	public int[] singleNumber(int[] nums) {
-		int sum1=0;
-		int sum2=0;
+	//a fabulous way
+	public int[] singleNumber(int []nums){
+		int s=0;
 		for (int i:nums){
-			sum1^=i;
-			sum2^=i*i;
+			s^=i;
 		}
 		int[] result=new int[2];
-		//a^b=c <-> b^c=a
+		int bit=s&(~(s-1));
 		for (int i:nums){
-			int x=i;
-			int y=x^sum1;
-			if ((x*x^y*y)==sum2){
-				result[0]=x;
-				result[1]=y;
-				break;
+			if ((i&bit)==0){
+				result[0]^=i;
+			}else{
+				result[1]^=i;
 			}
 		}
 		return result;
-    }
+	}
+	
+//	public int[] singleNumber(int[] nums) {
+//		int sum1=0;
+//		int sum2=0;
+//		for (int i:nums){
+//			sum1^=i;
+//			sum2^=i*i;
+//		}
+//		int[] result=new int[2];
+//		//a^b=c <-> b^c=a
+//		for (int i:nums){
+//			int x=i;
+//			int y=x^sum1;
+//			if ((x*x^y*y)==sum2){
+//				result[0]=x;
+//				result[1]=y;
+//				break;
+//			}
+//		}
+//		return result;
+//    }
 }
