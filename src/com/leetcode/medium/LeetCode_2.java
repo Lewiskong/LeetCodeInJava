@@ -19,19 +19,29 @@ public class LeetCode_2 {
         	if (l1==null){
         		int val=l2.val+carry;
         		if (val>=10) {carry=1;val-=10;}else carry=0;
-        		cur=new ListNode(val);
+        		cur.next=new ListNode(val);
+        		cur=cur.next;
+        		l2=l2.next;
         	}else if (l2==null){
         		int val=l1.val+carry;
-        		if (val>10) {carry=1;val-=10;}else carry=0;
-        		cur=new ListNode(val);
+        		if (val>=10) {carry=1;val-=10;}else carry=0;
+        		cur.next=new ListNode(val);
+        		cur=cur.next;
+        		l1=l1.next;
         	}else{
         		int val=l1.val+l2.val+carry;
         		if (val>=10) {carry=1;val-=10;}else carry=0;
-        		cur=new ListNode(val);
+        		cur.next=new ListNode(val);
+        		cur=cur.next;
+        		l1=l1.next;
+        		l2=l2.next;
         	}
         }
+        if (carry==1) cur.next=new ListNode(1);
         return ln.next;
     }
+	
+	
 }
 
 
